@@ -28,8 +28,9 @@ namespace MVCDefault.App_Start
 
             BundleTable.Bundles.Add(new StyleBundle("~/Content/dist").
                 Include("~/Content/dist/AdminLTE.min.css",
-                "~/Content/dist/skins/_all-skins.min.css",
-                "~/Content/dist/skins/skin-" + color + ".min.css"));
+                "~/Content/dist/skins/_all-skins.min.css"
+                //"~/Content/dist/skins/skin-" + color + ".min.css"
+                ));
         }
     }
 }

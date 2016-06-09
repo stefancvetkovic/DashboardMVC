@@ -27,6 +27,16 @@ namespace MVCDefault
                       "~/Content/bootstrap.css"
                       //"~/Content/site.css"
                       ));
+
+             bundles.Add(new ScriptBundle("~/bundles/bootstrap-min-js").Include(
+                      "~/Scripts/bootstrap.min.js"
+                     ));
+
+             bundles.Add(new StyleBundle("~/Content/bootstrap-min-css").Include(
+                      "~/Content/bootstrap.min.css"
+                      //"~/Content/site.css"
+                      ));
+
         }
     }
 }

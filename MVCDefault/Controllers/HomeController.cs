@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCDefault.Models;
 
 namespace MVCDefault.Controllers
 {
@@ -10,7 +11,11 @@ namespace MVCDefault.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            List<SelectListItem> list = new List<SelectListItem>();
+            list.Add(new SelectListItem { Value = "1", Text = "Kragujevac", Selected = true});
+            list.Add(new SelectListItem { Value = "2", Text = "Beograd", Disabled = true });
+            list.Add(new SelectListItem { Value = "3", Text = "Krusevac"});
+            return View(list);
         }
 
         public ActionResult About()
