@@ -28,10 +28,10 @@ namespace MVCDefault.App_Start
                          "~/Additional/plugins/daterangepicker/daterangepicker.js",
                          "~/Additional/plugins/datepicker/bootstrap-datepicker.js",
                          "~/Additional/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
-                         "~/Additional/plugins/bootstrap-wysihtml5/slimScroll/jquery.slimscroll.min.js",
+                         "~/Additional/plugins/slimScroll/jquery.slimscroll.min.js",
                          "~/Additional/plugins/iCheck/icheck.min.js",
-                            //"~/Additional/plugins/iCheck/icheck.js",
-                         "~/Additional/plugins/bootstrap-wysihtml5/fastclick/fastclick.js"
+                //"~/Additional/plugins/iCheck/icheck.js",
+                         "~/Additional/plugins/fastclick/fastclick.js"
                          ));
 
             BundleTable.Bundles.Add(new StyleBundle("~/Additional/CssAddOns").
@@ -46,6 +46,22 @@ namespace MVCDefault.App_Start
                         "~/Additional/plugins/timepicker/bootstrap-timepicker.min.css",
                         "~/Additional/plugins/select2/select2.min.css",
                         "~/Additional/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"));
+
+            BundleTable.Bundles.Add(new StyleBundle("~/Additional/CssCalendar").Include(
+                "~/Additional/plugins/fullcalendar/fullcalendar.min.css"
+                //"~/Additional/plugins/fullcalendar/fullcalendar.print.css"
+                ));
+
+            BundleTable.Bundles.Add(new ScriptBundle("~/Additional/JSCalendar").
+                Include(
+                 "~/Additional/jquery-ui.min.js",
+                  "~/Additional/plugins/slimScroll/jquery.slimscroll.min.js",
+                  "~/Additional/plugins/fastclick/fastclick.js",
+                  "~/Scripts/dist/app.min.js",
+                  //"~/Scripts/dist/demo.js",
+                  "~/Additional/moment.min.js",
+                  "~/Additional/plugins/fullcalendar/fullcalendar.min.js"
+                ));
 
         }
     }

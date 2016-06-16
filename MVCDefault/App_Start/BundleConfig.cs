@@ -9,7 +9,10 @@ namespace MVCDefault
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery.min").Include(
+                        "~/Scripts/jquery-1.10.2.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -36,6 +39,16 @@ namespace MVCDefault
                       "~/Content/bootstrap.min.css"
                       //"~/Content/site.css"
                       ));
+
+             //bundles.Add(new StyleBundle("~/Additional/CssCalendar").Include(
+             //   "~/Additional/plugins/skins/fullcalendar/fullcalendar.min.css",
+             //   "~/Additional/plugins/skins/fullcalendar.print.css"
+             //   ));
+
+             //bundles.Add(new ScriptBundle("~/Additional/JSCalendar").
+             //    Include(
+             //     "~/Additional/plugins/skins/fullcalendar/fullcalendar.min.js"
+             //    ));
 
         }
     }
